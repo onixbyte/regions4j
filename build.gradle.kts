@@ -46,6 +46,13 @@ repositories {
 group = "com.onixbyte"
 version = artefactVersion
 
+dependencies {
+    implementation(libs.jspecify.core)
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.junit.jupiter)
+    testRuntimeOnly(libs.junit.platformLauncher)
+}
+
 publishing {
     publications.create<MavenPublication>("maven") {
         groupId = group.toString()
@@ -104,6 +111,10 @@ publishing {
             }
         }
     }
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 tasks.withType<JavaCompile>() {
