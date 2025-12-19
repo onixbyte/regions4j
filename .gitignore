@@ -102,16 +102,13 @@ http-client.private.env.json
 **/build/
 !**/src/**/build/
 
-# Ignore Gradle GUI config
-gradle-app.setting
+!gradle/wrapper/
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle/wrapper/gradle-wrapper.jar
 
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
+!gradle/wrapper/gradle-wrapper.properties
 
-# Cache of project
+gradle-app.setting
 .gradletasknamecache
 
 # Eclipse Gradle plugin generated files
