@@ -56,7 +56,7 @@ dependencies {
 publishing {
     publications.create<MavenPublication>("maven") {
         groupId = group.toString()
-        artifactId = "region"
+        artifactId = "regions4j"
         version = artefactVersion
 
         pom {
